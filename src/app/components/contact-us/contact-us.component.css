@@ -1,0 +1,67 @@
+.footer {
+  background-color: #231f20;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia;
+}
+
+.header {
+  font: normal normal normal 33px/37px Georgia;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 27px;
+  margin-bottom: 13px;
+}
+
+p {
+  font: normal normal normal 16px/21px Georgia;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+.favicon {
+  margin-top: 41px;
+  width: 40px;
+  align-self: center;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  column-gap: 37px;
+  color: white;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+.facebook-icon {
+  width: 11px;
+  height: 19px;
+}
+
+.linkedin-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.twitter-icon {
+  width: 20px;
+  height: 16px;
+}
+
+.instgram-icon {
+  width: 19px;
+  height: 19px;
+}
+
+.youtube-icon {
+  width: 21px;
+  height: 15px;
+}

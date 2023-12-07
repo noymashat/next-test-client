@@ -1,0 +1,19 @@
+<div class="movie">
+  <div class="img-placeholder">
+    <img class="movie-img" src="{{ item.image }}" />
+  </div>
+  <p [innerHTML]="title + ' (' + item.released + ')'" class="title">{{ title }} ({{ item.released }})</p>
+  <p class="rating">
+    <img class="rating-icon" src="../../../assets/star.png" /> {{ rating }}
+  </p>
+
+  <div class="read-more" (click)="toggleModal()">
+    <p class="read-more-text">Read more</p>
+    <img class="arrow-img" src="../../../assets/arrow.png" />
+  </div>
+  <app-info-modal
+    [movie]="item"
+    [showModal]="showModal"
+    (onClose)="onCloseModal()"
+  ></app-info-modal>
+</div>

@@ -1,0 +1,18 @@
+<div class="movies-list">
+  <h1 class="movies-header">
+    Explore Your Next <br />
+    Movies and Tv Shows
+  </h1>
+
+  <input
+    class="search-box"
+    type="text"
+    [(ngModel)]="inputValue"
+    (input)="search()"
+    placeholder="Search title..."
+  />
+
+  <div class="movie-item">
+    <app-movie *ngFor="let item of filteredData" [item]="item"></app-movie>
+  </div>
+</div>
