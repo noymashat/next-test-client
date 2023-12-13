@@ -4,13 +4,21 @@
     Movies and Tv Shows
   </h1>
 
-  <input
-    class="search-box"
-    type="text"
-    [(ngModel)]="inputValue"
-    (input)="search()"
-    placeholder="Search title..."
-  />
+  <div class="filter-container">
+    <input
+      class="search-box"
+      type="text"
+      [(ngModel)]="inputValue"
+      (input)="search()"
+      placeholder="Search title..."
+    />
+
+    <select (change)="filter($event)">
+      <option value="all">All</option>
+      <option value="movie">Movies</option>
+      <option value="series">Series</option>
+    </select>
+  </div>
 
   <div class="movie-item">
     <app-movie *ngFor="let item of filteredData" [item]="item"></app-movie>

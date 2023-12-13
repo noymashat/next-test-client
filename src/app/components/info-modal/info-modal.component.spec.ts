@@ -20,4 +20,13 @@ describe('InfoModalComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit onClose event when closeModal is called', () => {
+    spyOn(component.onClose, 'emit');
+
+    component.closeModal();
+
+    expect(component.onClose.emit).toHaveBeenCalled();
+  });
+
 });

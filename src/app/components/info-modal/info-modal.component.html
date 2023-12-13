@@ -1,11 +1,11 @@
-<div [ngClass]="{ 'show-modal': showModal }" class="modal">
+<div *ngIf="showModal" class="modal">
     <div class="modal-content">
       <div class="img-placeholder">
         <img class="movie-img" src="{{ movie.image }}" />
       </div>
       <div class="text-content">
         <p class="title">{{ movie.title }}</p>
-        <p class="duration">{{ movie.runtime }}</p>
+        <p class="duration">{{ movie.runtime | duratiomDisplay }}</p>
         <p *ngIf="this.movie.rating !== ''" class="rating">
           <img class="rating-icon" src="../../../assets/star.png" />
           {{ movie.rating }}/10
@@ -14,7 +14,7 @@
             <img class="rating-icon" src="../../../assets/star.png" />
             N/A
           </p>
-        <p innerHTML={{movie.synopsis}} class="synopsis">{{ movie.synopsis }}</p>
+        <p [innerHTML]="safeSynopsis" class="synopsis"></p>
         <div class="back" (click)="closeModal()">
           <img class="arrow-left-img" src="../../../assets/arrowLeft.png" />
           <p class="back-text">Back to list</p>

@@ -1,5 +1,5 @@
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -20,10 +20,6 @@
   height: fit-content;
   flex-direction: column;
   padding: 18px 19px 22px 19px;
-}
-
-.show-modal {
-  display: block;
 }
 
 .movie-img {
@@ -82,6 +78,7 @@ p {
   align-items: center;
   width: 260px;
   height: 36px;
+  cursor: pointer;
 }
 
 .back-text {

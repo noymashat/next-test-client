@@ -1,19 +1,21 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from '../../shared/types';
 import { InfoModalComponent } from '../info-modal/info-modal.component';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { TitleDisplayPipe } from '../../shared/pipes/title-display.pipe';
 
 @Component({
   selector: 'app-movie',
   standalone: true,
-  imports: [InfoModalComponent],
+  imports: [CommonModule, InfoModalComponent, TitleDisplayPipe],
   templateUrl: './movie.component.html',
   styleUrl: './movie.component.css'
 })
-export class MovieComponent implements OnInit{
+export class MovieComponent {
   @Input() item: Movie = {
     id: '',
     title: '',
+    searchTitle: '',
     image: '',
     synopsis: '',
     rating: '',
@@ -26,15 +28,8 @@ export class MovieComponent implements OnInit{
     download: ''
   };
   showModal: boolean = false;
-  title = '';
   rating = '';
-  constructor() {
-  }
-
-  ngOnInit(): void {
-    this.title = this.item.title.length > 25 ? this.item.title.substring(0, 25) + "..." : this.item.title;
-    this.rating = this.item.rating === '' ? "N/A" : this.item.rating;
-  }
+  constructor() {}
 
   toggleModal() {
     this.showModal = !this.showModal;

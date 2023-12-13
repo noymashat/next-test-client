@@ -29,11 +29,31 @@
   border: 1px solid #cccccc;
   border-radius: 4px;
   outline: none;
-  width: 240px;
+  width: 180px;
   margin-bottom: 20px;
 }
 
 .search-box:focus {
+  border: 1px solid #0000ff;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+
+select {
+  padding: 8px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+select:focus {
   border: 1px solid #0000ff;
 }
 
@@ -50,5 +70,9 @@
   .movie-item {
     column-gap: 15px;
     row-gap: 94px;
+  }
+
+  .search-box {
+    width: 240px;
   }
 }
