@@ -20,8 +20,8 @@ p {
   margin: 0;
 }
 
-.full-title{
-    display: inline-flex;
+.full-title {
+  display: inline-flex;
 }
 
 .title {
@@ -53,6 +53,7 @@ p {
   display: flex;
   align-items: center;
   height: 28px;
+  cursor: pointer;
 }
 
 .read-more-text {
